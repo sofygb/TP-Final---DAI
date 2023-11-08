@@ -1,0 +1,5 @@
+
+upload files
+create a file (portapapeles)
+acceso a cámara
+modal cuando se termina de subir el archivo (notificación + vibración)
