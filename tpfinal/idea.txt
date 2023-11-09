@@ -1,8 +1,0 @@
-
-upload files
-create a file (portapapeles)
-acceso a cámara
-modal cuando se termina de subir el archivo (notificación + vibración)
-
-REFERENCIAS:
-    NOTAS: https://www.geeksforgeeks.org/how-to-create-a-basic-notes-app-using-react-native/
