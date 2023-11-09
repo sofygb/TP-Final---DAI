@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import * as Clipboard from 'expo-clipboard';
 
-export default function App() {
+export default function ClipBoard({ navigation }) {
   const [copiedText, setCopiedText] = React.useState('');
 
   const copyToClipboard = async () => {

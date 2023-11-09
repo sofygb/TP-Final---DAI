@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Slider from '@react-native-community/slider'
 
 
-const App = () => {
+export default function Vibration({ navigation }) {
     const [segundos, setSegundos] = useState(0)
     const handleSegundos = value => setSegundos(value)
 
@@ -58,5 +58,3 @@ const styles = StyleSheet.create({
         borderBottomWidth: StyleSheet.hairlineWidth,
     },
 })
-
-export default App

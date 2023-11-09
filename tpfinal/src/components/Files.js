@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Button, Text, TextInput, StyleSheet } from 'react-native';
 import * as FileSystem from 'expo-file-system';
 
-const App = () => {
+export default function Files({ navigation }) {
   const [files, setFiles] = useState([]);
   const [newFileName, setNewFileName] = useState('');
 
@@ -70,5 +70,3 @@ const styles = StyleSheet.create({
     padding: 5,
   },
 });
-
-export default App;
