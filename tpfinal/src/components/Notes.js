@@ -10,7 +10,7 @@ import {
 	StyleSheet, 
 } from "react-native"; 
 
-export default function Notes({ navigation }) {
+export default function Notes() {
 	const [notes, setNotes] = useState([]); 
 	const [selectedNote, setSelectedNote] = useState(null); 
 	
