@@ -1,17 +1,18 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View, FlatList } from 'react-native';
-import { ActionTypes, useContextState, setContextState, contextState } from './navigation/contextState';
+import {StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
 
 export default function Home({ navigation }) {
-
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.centrar}>
                 <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate("Camara")}>
                     <Text style={styles.texto}>Abrir camara</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate("Files")}>
+            </View>
+        </SafeAreaView>
+    );
+}
+/*              <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate("Files")}>
                     <Text style={styles.texto}>Seleccionar foto o video</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate("Notes")}>
@@ -20,11 +21,7 @@ export default function Home({ navigation }) {
                 <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate("MisSaves")}>
                     <Text style={styles.texto}>Mis Archivos</Text>
                 </TouchableOpacity>
-            </View>
-        </SafeAreaView>
-    );
-}
-
+*/
 
 
 const styles = StyleSheet.create({
