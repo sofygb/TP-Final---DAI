@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {Entypo} from '@expo/vector-icons';
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function Camara() {
+export default function Camara({icon,color}) {
     const [type, setType] = useState(CameraType.back);
     const [permission, requestPermission] = Camera.useCameraPermissions();
 
