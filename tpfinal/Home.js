@@ -8,6 +8,9 @@ export default function Home({ navigation }) {
                 <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate("Camara")}>
                     <Text style={styles.texto}>Abrir camara</Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate("Notes")}>
+                    <Text style={styles.texto}>Block de Notas</Text>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     );

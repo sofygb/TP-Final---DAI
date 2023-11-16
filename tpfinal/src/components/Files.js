@@ -42,7 +42,7 @@ export default function Files({ navigation }) {
         value={newFileName}
         onChangeText={(text) => setNewFileName(text)}
       />
-      <Button title="Escribir archivo" onPress={handleWriteFile} />
+      <Button title="Escribir archivo" onPress={handleWriteFile} /> {/*cambiar*/}
       {files.length > 0 && (
         <Text>
           Los archivos de la carpeta son: {files.map((file) => (

@@ -29,7 +29,7 @@ export default function Camara({icon,color}) {
             <Camera style={styles.camera} type={type}>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.button} onPress={toggleCameraType}>
-                        <Entypo name={icon} size={28} color={color ? color : '#f1f1f1'}/>
+                        <Entypo name={icon} size={28} color={'#f1f1f1'}/>
                         <Text style={styles.text}>Dar Vuelta Camera</Text>
                     </TouchableOpacity>
                 </View>
@@ -54,9 +54,11 @@ const styles = StyleSheet.create({
     },
     button: {
         flex: 1,
+        flexDirection: 'row',
         height:40,
         alignSelf: 'flex-end',
         alignItems: 'center',
+        justifyContent: 'center',
     },
     text: {
         fontSize: 24,
