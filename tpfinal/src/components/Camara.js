@@ -1,5 +1,6 @@
 import { Camera, CameraType } from 'expo-camera';
 import { useState } from 'react';
+import {Entypo} from '@expo/vector-icons';
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Camara() {
@@ -28,6 +29,7 @@ export default function Camara() {
             <Camera style={styles.camera} type={type}>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.button} onPress={toggleCameraType}>
+                        <Entypo name={icon} size={28} color={color ? color : '#f1f1f1'}/>
                         <Text style={styles.text}>Dar Vuelta Camera</Text>
                     </TouchableOpacity>
                 </View>
@@ -52,6 +54,7 @@ const styles = StyleSheet.create({
     },
     button: {
         flex: 1,
+        height:40,
         alignSelf: 'flex-end',
         alignItems: 'center',
     },

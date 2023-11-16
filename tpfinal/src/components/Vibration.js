@@ -1,60 +1,46 @@
-import { Button, Platform, Text, Vibration, View, SafeAreaView, StyleSheet } from 'react-native'
-import React, { useState } from 'react'
-import Slider from '@react-native-community/slider'
+import { StyleSheet, ScrollView, Text, View, SafeAreaView, TouchableOpacity, FlatList, Vibration, Button  } from "react-native";
+import React, { useState, useEffect} from "react";
 
-
-export default function Vibration({ navigation }) {
-    const [segundos, setSegundos] = useState(0)
-    const handleSegundos = value => setSegundos(value)
-
-    const Separator = () => <View style={Platform.OS === 'android' ? styles.separator : null} />
+export default function VibracionScreen() {
+    const ONE_SECOND_IN_MS = 1000;
 
     return (
-        <SafeAreaView style={styles.container}>
-            <Text style={[styles.header, styles.paragraph]}>Vibración 😎</Text>
-            <View>
-                <Button title="Vibrar" onPress={() => Vibration.vibrate()} />
-            </View>
-
-            <Separator />
-            <Text>Elegir los segundos a vibrar: (de 1 a 5)</Text>
-            <Slider
-                style={{ width: 200, height: 40, width: '100%' }}
-                minimumValue={1}
-                maximumValue={5}
-                step={1}
-                value={segundos}
-                onValueChange={handleSegundos}
-            />
-
-            <Button title="Vibrar Por segundos elegidos" onPress={() => Vibration.vibrate(segundos * 1000)} />
-
-            <Separator />
-
-            <Button title="Cancelar vibracao" onPress={() => Vibration.cancel()} color="#FF0000" />
-        </SafeAreaView>
-    )
+        <View style={styles.container}>
+            <TouchableOpacity onPress={() => Vibration.vibrate(10 * ONE_SECOND_IN_MS)} style={styles.boton}>
+                <Text style={styles.texto}>Vibrar</Text>
+            </TouchableOpacity>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
     container: {
+        display: "flex",
         flex: 1,
+        backgroundColor: 'white',
+    },
+    boton: {
+        borderRadius: 15,
+        borderColor: '#58CBC0',
+        backgroundColor: '#58CBC0',
+        minHeight: 50,
+        minWidth: 200,
+        margin: 10,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    texto: {
+        display: 'flex',
+        color: 'white',
+        display: 'flex',
+        alignContent: 'center',
         justifyContent: 'center',
-        padding: 8,
-        gap: 20
+        fontSize: 18,
     },
-    header: {
-        fontSize: 28,
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },
-    paragraph: {
-        margin: 24,
-        textAlign: 'center',
-    },
-    separator: {
-        marginVertical: 8,
-        borderBottomColor: '#737373',
-        borderBottomWidth: StyleSheet.hairlineWidth,
-    },
-})
+    centrar: {
+        flex: 1,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
+});
